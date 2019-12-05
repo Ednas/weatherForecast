@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="container-fluid screensize">
+        <div class="row">
+            <aside class="col-md-3 bg-light">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                        <h5 class="mt-5 ml-3">Search for a City:</h5>
+                        <div class="form-inline form-group">
+                            <input class="form-control" type="text" id="searchVal">
+                            <button class="btn btn-primary" id="searchBtn"><i class="fa fa-search"></i> </button>
+                        </div>
+                        <ul class="list-group history"></ul>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="col-md-9">
+                <div class="col-md-10">
+                    <div id="today" class="mt-3"></div>
+                </div>
+                <div class="col-md-12">
+
+                <div id="forecast" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="push"></div>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="http://www.edna.tech">About Edna Jonsson</a> | <a href="https://github.com/Ednas/">GitHub Repo</a>
+          <br> &copy; 2019 Edna Jonsson</p>
+      </div>
+    </footer>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
