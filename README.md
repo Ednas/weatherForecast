@@ -1,6 +1,6 @@
 # Weather Forecast
 
-Utilizing the ![Open Weather map API](https://openweathermap.org/) I have created an app that gets todays forecast as well as a 5 day forecast.
+Utilizing the [Open Weather map API](https://openweathermap.org/) I have created an app that gets todays forecast as well as a 5 day forecast.
 
 I utilized Geolocation to get the users city for the initial page load, if the Geolocation is not available or activated, there is a generic search term and the user can use 
 the input form to enter a city and search for it.
