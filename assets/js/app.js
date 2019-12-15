@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const API_Key = "146083ba4b9b0c9c46a21818015c3741";
+    const API_Key = "";
     if ("geolocation" in navigator) {
         /* geolocation is available */
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -177,10 +177,20 @@ function ultraviolet(lat, lon){
 }
 
 // This button click lets a user enter in a city and search based on city
+// Then clears the input field
 $('#searchBtn').on('click', function(){
     var city = $('#searchVal').val();
     todayForecast(city);
+    $('#searchVal').val("");
 });
+
+// Makes it so that you can press enter button to get results (clicks the search button on enter)
+  $('#searchVal').keyup(function() {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        $("#searchBtn").click();
+    }
+  });
 // Clicking on the history items will get the weather for that city
 $(".history").on("click", "li", function() {
     todayForecast($(this).text());
@@ -188,7 +198,7 @@ $(".history").on("click", "li", function() {
 // creates a list item for the text passed into it (an array)
   function makeRow(text) {
     var li = $("<li>").addClass("list-group-item list-group-item-action").text(text);
-    $(".history").append(li);
+    $(".history").prepend(li);
   }
 
   // get current history, if any
